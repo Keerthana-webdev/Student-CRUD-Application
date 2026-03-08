@@ -21,7 +21,7 @@ function StudentForm() {
   const [editId, setEditId] = useState(null);
 
   const fetchStudents = async () => {
-    const res = await axios.get("http://localhost:5000/students");
+    const res = await axios.get("/api/students");
     setStudents(res.data);
   };
 
@@ -37,10 +37,10 @@ function StudentForm() {
     e.preventDefault();
 
     if (editId) {
-      await axios.put(`http://localhost:5000/students/${editId}`, form);
+      await axios.put(`/api/students/${editId}`, form);
       setEditId(null);
     } else {
-      await axios.post("http://localhost:5000/students", form);
+      await axios.post("/api/students", form);
     }
 
     setForm({
@@ -65,7 +65,7 @@ function StudentForm() {
   };
 
   const deleteStudent = async (id) => {
-    await axios.delete(`http://localhost:5000/students/${id}`);
+    await axios.delete(`/api/students/${id}`);
     fetchStudents();
   };
 
