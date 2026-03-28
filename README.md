@@ -19,11 +19,12 @@ A simple full-stack Student Management application built using the MERN stack (M
 
 ---
 ## 📂 Project Structure
+```bash
 Student-CRUD-MERN/
 │
 ├── client/ # React Frontend
 └── service/ # Node + Express Backend
-
+```
 ---
 ## ▶️ How to Run
 
@@ -47,7 +48,4 @@ Frontend runs on: `http://localhost:3000`
 
 ## 👩‍💻 Author
 ### Keerthana.S
-
----
-
 ✨ This project demonstrates basic CRUD operations using the MERN stack.
